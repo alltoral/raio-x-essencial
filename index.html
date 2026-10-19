@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raio-X Essencial | Corpo Primaz</title>
+<meta name="theme-color" content="#0F0F0E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Raio-X Essencial">
+<meta property="og:description" content="Os testes, os exercícios de correção e o kinesio tape do Raio-X Biomecânico, para você seguir no seu ritmo.">
+<meta property="og:image" content="assets/simbolo.png">
+<link rel="icon" type="image/png" href="assets/simbolo.png">
+<link rel="apple-touch-icon" href="assets/simbolo.png">
+<meta name="description" content="Raio-X Essencial: os testes, os exercícios de correção e o kinesio tape do Raio-X Biomecânico, para seguir sozinho, no seu ritmo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+<style>
+/* Página de downsell do Raio-X Biomecânico. Mesma identidade da página principal, mais curta e direta. */
+:root{
+  --carvao:#0F0F0E;
+  --carvao-2:#161514;
+  --faixa:#1B1A17;
+  --grafite:#26241F;
+  --linha:#35322B;
+  --osso:#E0E0E0;
+  --texto:#F6F3EC;
+  --apoio:#B8B2A6;
+  --mudo:#857F73;
+  --ambar:#D4A017;
+  --ambar-claro:#EEC452;
+  --ambar-escuro:#8A6810;
+  --tinta:#121212;
+  --marca:'Cinzel', 'Trajan Pro', Georgia, serif;
+  --corpo:'Outfit', 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+  --virada:'Cormorant Garamond', Garamond, Georgia, serif;
+  --gutter:clamp(18px, 5vw, 48px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{background:var(--carvao)}
+body{margin:0;color:var(--texto);font-family:var(--corpo);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--ambar-claro)}
+h1,h2,h3{margin:0;letter-spacing:-.02em;text-wrap:balance;color:var(--texto)}
+h2{font-size:clamp(30px, 6.4vw, 52px);line-height:1.05;font-weight:700}
+h3{font-size:20px;line-height:1.25;font-weight:600}
+p{margin:0}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding-inline:var(--gutter)}
+.estreito{max-width:760px}
+.rotulo{font-family:var(--marca);font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--ambar)}
+.rotulo.mudo{color:var(--mudo)}
+.virada{font-family:var(--virada);font-style:italic;font-weight:600;color:var(--ambar);letter-spacing:0}
+.apoio{color:var(--apoio)}
+.cabeca{display:flex;flex-direction:column;gap:14px;max-width:760px}
+.cabeca p{color:var(--apoio);font-size:18px}
+.cabeca.centro{margin-inline:auto;text-align:center;align-items:center}
+section{padding-block:clamp(64px, 8vw, 104px);position:relative}
+#planos{padding-bottom:clamp(40px, 5vw, 64px)}
+#planos + section{padding-top:clamp(48px, 6vw, 72px)}
+.faixa{background:linear-gradient(180deg,var(--faixa),var(--carvao-2))}
+.faixa-ambar{background:radial-gradient(120% 80% at 50% 0%,rgba(212,160,23,.16),transparent 60%),linear-gradient(180deg,#1A1710,var(--carvao))}
+
+/* Botões */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:14px 30px;border-radius:999px;background:linear-gradient(180deg,var(--ambar-claro),var(--ambar));color:var(--tinta);font-family:var(--corpo);font-weight:700;font-size:18px;text-decoration:none;border:0;cursor:pointer;box-shadow:0 10px 30px -10px rgba(212,160,23,.6);transition:transform .2s var(--ease), box-shadow .2s}
+@media (max-width:420px){.btn{padding:14px 20px;font-size:16px;gap:8px;white-space:nowrap}}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px -10px rgba(212,160,23,.75)}
+.btn::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg)}
+.btn.brilha::after{animation:brilho 4.5s ease-in-out infinite}
+@keyframes brilho{0%,70%{left:-60%}100%{left:130%}}
+.btn.sec{background:transparent;color:var(--texto);border:1px solid var(--linha);box-shadow:none}
+.btn.sec:hover{border-color:var(--ambar);box-shadow:none}
+.btn.sec::after{display:none}
+.btn:focus-visible,.link:focus-visible,summary:focus-visible,.cap:focus-visible{outline:2px solid var(--ambar-claro);outline-offset:3px}
+.link{color:var(--apoio);text-decoration:underline;text-underline-offset:3px;font-size:15px;display:inline-flex;align-items:center;min-height:44px}
+.link:hover{color:var(--texto)}
+
+/* Navegação */
+.nav{position:sticky;top:env(safe-area-inset-top, 0px);z-index:30;background:rgba(15,15,14,.72);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,160,23,.18)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.marca img{width:34px;height:34px;object-fit:contain;mix-blend-mode:lighten}
+.marca span{font-family:var(--marca);font-size:13px;font-weight:600;letter-spacing:.26em;color:var(--ambar);white-space:nowrap}
+.nav .btn{min-height:42px;padding:8px 16px;font-size:14px;white-space:nowrap}
+
+/* Hero cinematográfico */
+.hero{padding:0;min-height:min(92vh, 860px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-foto{position:absolute;inset:0 0 auto 0;height:min(134vw, 640px);z-index:-1}
+.hero-foto picture{display:block;width:100%;height:100%}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 96%);mask-image:linear-gradient(180deg,#000 55%,transparent 96%);animation:aproxima 14s var(--ease) both}
+@keyframes aproxima{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;z-index:-1;width:520px;height:520px;right:-120px;top:10%;border-radius:50%;background:radial-gradient(circle,rgba(212,160,23,.22),transparent 65%);animation:pulsa 6s ease-in-out infinite}
+@keyframes pulsa{50%{opacity:.55;transform:scale(1.08)}}
+.hero .wrap{padding-block:calc(min(134vw, 640px) * .6) clamp(48px, 8vw, 96px)}
+.hero-texto{display:flex;flex-direction:column;gap:22px;max-width:640px}
+.hero h1{font-size:clamp(42px, 10.5vw, 78px);line-height:.98;font-weight:800;letter-spacing:-.035em}
+.hero h1 .linha{display:block;overflow:hidden}
+.hero h1 .linha span{display:block;animation:sobe 1s var(--ease) both}
+.hero h1 .linha:nth-child(2) span{animation-delay:.12s}
+.hero h1 .virada{display:block;font-size:.72em;line-height:1.1;margin-top:10px;font-weight:600;animation:sobe 1s .3s var(--ease) both}
+@keyframes sobe{from{transform:translateY(105%);opacity:0}to{transform:none;opacity:1}}
+.hero-sub{font-size:19px;color:var(--apoio);max-width:32em;animation:aparece 1s .5s both}
+.hero-sub strong{color:var(--texto);font-weight:600}
+.hero-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;animation:aparece 1s .65s both}
+.hero-acoes small{font-size:14px;color:var(--mudo)}
+@keyframes aparece{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.com{display:flex;align-items:center;gap:12px;font-size:15px;white-space:nowrap;width:max-content;max-width:100%;color:var(--apoio);animation:aparece 1s .8s both}
+.com i{width:28px;height:1px;background:var(--ambar)}
+.com b{color:var(--texto);font-weight:600}
+.com > span,.com .caps{display:inline}
+.com .caps{font-family:var(--marca);font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--ambar)}
+
+/* Faixa de regiões (ticker) */
+.ticker{border-block:1px solid rgba(212,160,23,.22);background:var(--carvao-2);overflow:hidden;padding-block:16px}
+.ticker-trilho{display:flex;width:max-content;gap:0;animation:corre 38s linear infinite}
+.ticker span{display:inline-flex;align-items:center;gap:28px;padding-right:28px;font-family:var(--marca);font-size:14px;font-weight:600;letter-spacing:.24em;color:var(--apoio);white-space:nowrap}
+.ticker span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--ambar)}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* Números */
+.numeros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--linha);border:1px solid var(--linha);border-radius:14px;overflow:hidden}
+.numeros div{background:linear-gradient(180deg,var(--faixa),var(--carvao-2));padding:24px 20px;display:flex;flex-direction:column;gap:4px}
+.numeros strong{font-size:clamp(40px, 9vw, 60px);line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--texto);font-variant-numeric:tabular-nums}
+.numeros strong em{font-style:normal;font-size:inherit;color:var(--ambar);margin-left:.12em}
+.numeros strong span{font-size:inherit;color:inherit}
+.numeros strong.ouro{color:var(--ambar)}
+.numeros div > span{font-size:14px;color:var(--apoio)}
+
+/* Identificação */
+.dores{display:grid;gap:12px}
+.dor{display:flex;gap:16px;align-items:flex-start;padding:22px;border-radius:14px;background:linear-gradient(160deg,var(--grafite),var(--carvao-2));border:1px solid var(--linha);transition:border-color .3s, transform .3s var(--ease)}
+.dor:hover{border-color:rgba(212,160,23,.5);transform:translateY(-3px)}
+.dor .ic{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(212,160,23,.12);color:var(--ambar)}
+.dor b{display:block;font-size:18px;font-weight:600;line-height:1.3;margin-bottom:4px}
+.dor p{font-size:15px;color:var(--apoio)}
+.fecho{font-size:clamp(30px, 7vw, 52px);line-height:1.08;font-weight:800;letter-spacing:-.03em;text-align:center}
+
+/* Foto x vídeo */
+.versus{display:grid;gap:12px}
+.lado{border-radius:16px;padding:clamp(24px, 5vw, 40px);display:flex;flex-direction:column;gap:12px;min-width:0}
+.lado.foto{background:linear-gradient(160deg,#2A2925,#1A1917);border:1px solid var(--linha)}
+.lado.video{background:linear-gradient(160deg,rgba(212,160,23,.95),rgba(170,124,14,.95));color:var(--tinta)}
+.lado.video .rotulo{color:rgba(18,18,18,.7)}
+.lado strong{font-size:clamp(38px, 8vw, 60px);line-height:1;font-weight:800;letter-spacing:-.03em}
+.lado.video strong,.lado.video p{color:var(--tinta)}
+.lado p{font-size:17px;color:var(--apoio)}
+.lado.video p{opacity:.85}
+.lado .icone-play{width:52px;height:52px;border-radius:50%;background:var(--tinta);display:grid;place-items:center}
+.lado .icone-foto{width:52px;height:52px;border-radius:12px;border:1.5px solid var(--mudo);display:grid;place-items:center}
+
+/* Pista */
+.pista{display:grid;gap:20px;padding:clamp(24px, 5vw, 44px);border-radius:18px;background:radial-gradient(90% 120% at 0% 0%,rgba(212,160,23,.2),transparent 60%),var(--faixa);border:1px solid rgba(212,160,23,.5)}
+.pista-tag{display:flex;align-items:center;gap:14px}
+.pista-tag span{font-family:var(--marca);font-size:12px;font-weight:600;letter-spacing:.28em;color:var(--ambar);padding:6px 12px;border:1px solid rgba(212,160,23,.6);border-radius:4px}
+.pista-tag i{flex:1;height:1px;background:rgba(212,160,23,.35)}
+
+/* Capítulos (12 checkpoints) */
+.caps-topo{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px}
+.caps{display:grid;grid-auto-flow:column;grid-auto-columns:min(78%, 300px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter);scrollbar-width:thin;scrollbar-color:var(--linha) transparent}
+.cap{scroll-snap-align:start;position:relative;border-radius:16px;overflow:hidden;min-height:220px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;background:linear-gradient(165deg,var(--grafite),#121110 80%);border:1px solid var(--linha);transition:transform .35s var(--ease), border-color .35s}
+.cap::before{content:attr(data-n);position:absolute;right:-6px;bottom:-34px;font-family:var(--corpo);font-weight:800;font-size:150px;line-height:1;color:rgba(212,160,23,.07);letter-spacing:-.06em;pointer-events:none}
+.cap:hover{transform:translateY(-4px);border-color:rgba(212,160,23,.55)}
+.cap-topo{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cap-num{font-family:var(--marca);font-size:12px;font-weight:600;letter-spacing:.16em;white-space:nowrap;color:var(--ambar)}
+.cap-regiao{font-size:12px;letter-spacing:.06em;color:var(--apoio);padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--linha)}
+.cap h3{font-size:22px;line-height:1.15;font-weight:700;position:relative}
+.cap .fio{display:flex;gap:5px;position:relative}
+.cap .fio i{width:7px;height:7px;border-radius:50%;background:#3A372F}
+.cap .fio i.on{background:var(--ambar);box-shadow:0 0 10px rgba(212,160,23,.8)}
+.caps-dica{font-size:14px;color:var(--mudo);display:flex;align-items:center;gap:8px}
+
+/* Como funciona */
+.etapas{display:grid;gap:14px;counter-reset:e;position:relative}
+.etapa{counter-increment:e;position:relative;padding:24px 22px;border-radius:16px;background:linear-gradient(170deg,var(--grafite),var(--carvao-2));border:1px solid var(--linha);display:flex;flex-direction:column;gap:10px}
+.etapa::before{content:counter(e, decimal-leading-zero);font-family:var(--corpo);font-size:46px;font-weight:800;line-height:1;letter-spacing:-.04em;background:linear-gradient(180deg,var(--ambar-claro),var(--ambar-escuro));-webkit-background-clip:text;background-clip:text;color:transparent}
+.etapa h3{font-size:22px}
+.etapa p{font-size:15px;color:var(--apoio)}
+.etapa .tag{align-self:flex-start;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(212,160,23,.14);color:var(--ambar-claro)}
+
+/* 42 dias */
+.linha42{position:relative;height:6px;border-radius:3px;background:var(--grafite);overflow:hidden}
+.linha42 i{position:absolute;inset:0;transform-origin:left;transform:scaleX(var(--p,1));background:linear-gradient(90deg,var(--ambar-escuro),var(--ambar),var(--ambar-claro));transition:transform 1.8s var(--ease)}
+.fases{display:grid;gap:12px}
+.fase{padding:24px 22px;border-radius:16px;background:linear-gradient(170deg,var(--faixa),var(--carvao-2));border:1px solid var(--linha);display:flex;flex-direction:column;gap:8px}
+.fase .faixa-dias{font-family:var(--marca);font-size:13px;font-weight:600;letter-spacing:.18em;color:var(--ambar);font-variant-numeric:tabular-nums}
+.fase h3{font-size:26px;font-weight:700}
+.fase p{font-size:15px;color:var(--apoio)}
+.nota{font-size:14px;color:var(--mudo);line-height:1.55;max-width:60em}
+
+/* Quem criou */
+.autor-sec{overflow:hidden;isolation:isolate}
+.autor{display:grid;gap:8px;align-items:center}
+.autor-foto{position:relative;width:calc(100% + var(--gutter) * 2);margin-inline:calc(var(--gutter) * -1);max-width:none}
+.autor-foto img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 25%;-webkit-mask-image:radial-gradient(85% 70% at 50% 38%,#000 55%,transparent 100%);mask-image:radial-gradient(85% 70% at 50% 38%,#000 55%,transparent 100%)}
+.autor-foto::after{content:"";position:absolute;width:80%;aspect-ratio:1;left:10%;top:6%;border-radius:50%;z-index:-1;background:radial-gradient(circle,rgba(212,160,23,.32),transparent 68%);animation:pulsa 7s ease-in-out infinite}
+.autor-texto{display:flex;flex-direction:column;gap:26px;min-width:0;margin-top:-56px;position:relative}
+.autor-texto h2{font-size:clamp(36px, 8vw, 60px);font-weight:800;letter-spacing:-.03em}
+.autor-bio{font-size:18px;color:var(--apoio);max-width:34em}
+.autor-bio strong{color:var(--texto);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.stats div{padding:20px;border-radius:16px;background:linear-gradient(160deg,rgba(212,160,23,.16),rgba(212,160,23,.03));border:1px solid rgba(212,160,23,.4);display:flex;flex-direction:column;gap:6px}
+.stats strong{font-size:clamp(46px, 10vw, 64px);line-height:1;font-weight:800;letter-spacing:-.04em;color:var(--ambar);font-variant-numeric:tabular-nums}
+.stats span{font-size:15px;color:var(--osso)}
+.pos{display:grid;gap:8px}
+.pos-titulo{font-family:var(--marca);font-size:12px;font-weight:600;letter-spacing:.24em;color:var(--mudo)}
+.pos ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pos li{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid var(--linha);font-size:15px;color:var(--osso)}
+.pos li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--ambar);box-shadow:0 0 10px rgba(212,160,23,.7)}
+.registro{font-family:var(--marca);font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--ambar)}
+blockquote{margin:0;padding-left:20px;border-left:2px solid var(--ambar);font-family:var(--virada);font-style:italic;font-size:clamp(26px, 5vw, 34px);line-height:1.2;color:var(--osso)}
+
+/* Planos */
+.planos{display:grid;gap:16px;align-items:stretch}
+.plano{position:relative;border-radius:20px;padding:28px 24px;display:flex;flex-direction:column;gap:18px;background:linear-gradient(170deg,#2B2923,#1A1916 70%);border:1px solid #403C33;min-width:0}
+.plano.destaque{background:linear-gradient(170deg,#3A2E0F,#1E1A10 55%,#171512);border:1px solid transparent;box-shadow:0 30px 80px -30px rgba(212,160,23,.55)}
+.plano.destaque::before{content:"";position:absolute;inset:-1px;border-radius:21px;padding:1px;background:conic-gradient(from var(--ang,0deg),var(--ambar-claro),rgba(212,160,23,.15),var(--ambar),rgba(212,160,23,.15),var(--ambar-claro));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:gira 6s linear infinite;pointer-events:none}
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes gira{to{--ang:360deg}}
+.selo{position:absolute;top:-13px;left:24px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:var(--ambar);color:var(--tinta)}
+.plano-nome{font-family:var(--marca);font-size:24px;font-weight:700;letter-spacing:.1em}
+.plano-desc{font-size:15px;color:var(--apoio);min-height:3em}
+.valor{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px;font-variant-numeric:tabular-nums}
+.valor .vezes{width:100%;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--apoio);margin-bottom:-4px}
+.valor small{font-size:20px;color:var(--apoio);font-weight:600}
+.valor strong{font-size:clamp(50px, 12vw, 64px);line-height:1;font-weight:800;letter-spacing:-.04em}
+.plano.destaque .valor strong{background:linear-gradient(180deg,#FFF3CF,var(--ambar-claro) 60%,var(--ambar));-webkit-background-clip:text;background-clip:text;color:transparent}
+.valor-nota{font-size:14px;color:var(--mudo);margin-top:-10px}
+.valor-nota b{color:var(--osso);font-weight:600}
+.plano ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;flex:1}
+.plano li{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start;font-size:15px;color:var(--osso)}
+.plano li svg{margin-top:4px}
+.plano li.base{color:var(--apoio)}
+.plano .btn{width:100%}
+.upgrade{font-size:14px;color:var(--ambar-claro);text-align:center}
+.ast{font-size:.4em;vertical-align:super;color:var(--ambar-claro);margin-left:2px}
+.juros{font-size:12px;color:var(--mudo);margin-top:-10px;line-height:1.4}
+.plano-grupo{font-family:var(--marca);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ambar-claro);margin:4px 0 -6px}
+.planos.unico{grid-template-columns:minmax(0,600px);justify-content:center}
+.garantia{display:flex;gap:18px;align-items:flex-start;padding:22px 24px;border-radius:16px;background:rgba(212,160,23,.08);border:1px dashed rgba(212,160,23,.5)}
+.garantia svg{flex:none}
+.garantia b{display:block;font-size:18px;font-weight:700}
+.garantia span{font-size:15px;color:var(--apoio)}
+.gar-texto{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1}
+.gar-passos{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.gar-passos li{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border-radius:12px;background:rgba(15,15,14,.55);border:1px solid rgba(212,160,23,.25)}
+.gar-passos i{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:14px;background:var(--ambar);color:var(--tinta)}
+.gar-passos div{font-size:15px;color:var(--apoio);line-height:1.4}
+.gar-passos strong{display:block;font-size:16px;color:var(--texto);font-weight:700}
+.tabela-wrap{overflow-x:auto;border:1px solid var(--linha);border-radius:14px;background:var(--carvao-2)}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:460px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--linha)}
+th{font-family:var(--marca);font-size:11px;letter-spacing:.2em;font-weight:600;color:var(--mudo)}
+td:not(:first-child),th:not(:first-child){text-align:right;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td b{color:var(--ambar-claro)}
+.frase{font-size:clamp(22px, 4.6vw, 32px);line-height:1.3;font-weight:600;letter-spacing:-.01em;text-align:center;max-width:28em;margin-inline:auto}
+
+/* Para quem é */
+.duas{display:grid;gap:14px}
+.caixa{border-radius:18px;padding:28px 24px;display:flex;flex-direction:column;gap:16px;min-width:0;background:linear-gradient(170deg,var(--grafite),var(--carvao-2));border:1px solid var(--linha)}
+.caixa h3{font-size:22px}
+.caixa ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.caixa li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;font-size:16px;color:var(--osso)}
+.caixa li svg{margin-top:3px}
+.caixa.alerta{background:linear-gradient(170deg,#3A2D0C,#1C1810);border-color:rgba(212,160,23,.6)}
+.caixa.alerta h3{display:flex;align-items:center;gap:10px;color:var(--ambar-claro)}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:10px}
+details{border-radius:14px;background:linear-gradient(170deg,var(--faixa),var(--carvao-2));border:1px solid var(--linha);padding-inline:22px;transition:border-color .25s}
+details[open]{border-color:rgba(212,160,23,.45)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;padding-block:16px;font-size:18px;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:22px;font-weight:400;color:var(--ambar);border:1px solid rgba(212,160,23,.4);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding-bottom:22px;color:var(--apoio);max-width:44em}
+
+/* Final */
+.final{overflow:hidden;isolation:isolate;text-align:center}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 70% at 50% 100%,rgba(212,160,23,.28),transparent 70%)}
+.final .wrap{display:flex;flex-direction:column;align-items:center;gap:26px}
+.final h2{font-size:clamp(36px, 8vw, 68px);font-weight:800}
+.final h2 .virada{display:block;font-size:.8em}
+.final small{font-size:14px;color:var(--mudo)}
+
+/* Rodapé */
+footer{border-top:1px solid rgba(212,160,23,.25);padding-block:44px calc(44px + 88px)}
+.rodape{display:flex;flex-direction:column;gap:14px;font-size:14px;color:var(--mudo)}
+.rodape .obrig{color:var(--osso);font-size:16px;font-weight:500}
+
+/* Barra fixa no celular */
+.barra-cta{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:12px var(--gutter) calc(12px + env(safe-area-inset-bottom, 0px));background:rgba(15,15,14,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid rgba(212,160,23,.35);display:flex;align-items:center;justify-content:space-between;gap:14px;transform:translateY(110%);transition:transform .3s var(--ease)}
+.barra-cta.visivel{transform:none}
+.barra-cta div{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.barra-cta b{font-family:var(--marca);font-size:13px;letter-spacing:.14em;color:var(--ambar)}
+.barra-cta span{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+.barra-cta .btn{min-height:48px;padding:10px 22px;font-size:16px;flex:none}
+
+/* Entrada ao rolar: só some o que está abaixo da dobra no carregamento */
+.rv{transition:opacity .8s var(--ease), transform .8s var(--ease);transition-delay:var(--d,0s)}
+.rv.pre{opacity:0;transform:translateY(28px)}
+
+@media (min-width:760px){
+  .hero{min-height:min(88vh, 820px);align-items:center}
+  .hero-foto{inset:0 0 0 30%;width:auto;height:100%}
+  .hero-texto{max-width:min(470px, 37vw)}
+  .hero h1{font-size:clamp(42px, 4.6vw, 66px)}
+  .hero-sub{font-size:17px}
+  .hero-foto img{object-position:70% 50%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%),linear-gradient(180deg,#000 82%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 30%),linear-gradient(180deg,#000 82%,transparent 100%);mask-composite:intersect}
+  .hero-foto::after{display:none}
+  .hero .wrap{padding-block:clamp(48px, 7vw, 96px)}
+  .hero-texto{gap:18px}
+  .hero::before{display:none}
+  .numeros{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .dores{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .versus{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .caps{grid-auto-flow:row;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-columns:auto;overflow:visible;margin-inline:0;padding-inline:0}
+  .caps-dica{display:none}
+  .etapas{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .fases{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .autor{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+  .autor-foto{width:100%;margin-inline:0;align-self:stretch}
+  .autor-foto img{height:100%;min-height:620px;-webkit-mask-image:radial-gradient(closest-side at 50% 45%,#000 52%,transparent 100%);mask-image:radial-gradient(closest-side at 50% 45%,#000 52%,transparent 100%)}
+  .autor-texto{margin-top:0}
+  .pos ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .planos{grid-template-columns:1.12fr 1fr 1fr}
+  .plano.destaque{transform:translateY(-12px)}
+  .planos.unico{grid-template-columns:minmax(0,600px)}
+  .planos.unico .plano.destaque{transform:none}
+  .duas{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gar-passos{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .barra-cta{display:none}
+  footer{padding-block:48px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv.pre{opacity:1;transform:none}
+}
+.credito{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding-top:18px;border-top:1px solid var(--linha);font-size:13px;letter-spacing:.04em;color:var(--mudo);text-decoration:none;align-self:flex-start}
+.credito b{font-family:var(--marca);font-weight:600;letter-spacing:.2em;color:var(--apoio)}
+.credito:hover b{color:var(--ambar)}
+
+.ess-hero{position:relative;overflow:hidden;padding-block:clamp(72px,12vw,132px) clamp(48px,8vw,88px);background:radial-gradient(90% 70% at 85% 10%,rgba(212,160,23,.14),transparent 60%),var(--carvao)}
+.ess-hero .marca-d{position:absolute;right:-60px;top:40px;width:clamp(220px,40vw,420px);opacity:.07;pointer-events:none}
+.ess-hero h1{font-size:clamp(40px,9vw,72px);line-height:1;font-weight:800;letter-spacing:-.035em;max-width:14em}
+.ess-hero h1 .virada{display:block;font-size:.7em;line-height:1.12;margin-top:10px}
+.ess-hero p{font-size:clamp(17px,2.2vw,20px);color:var(--apoio);max-width:34em}
+.ess-hero .wrap{display:flex;flex-direction:column;gap:22px;position:relative}
+.sozinho{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:16px;background:rgba(212,160,23,.08);border:1px dashed rgba(212,160,23,.55);max-width:40em}
+.sozinho b{display:block;font-size:17px;margin-bottom:4px}
+.sozinho span{color:var(--apoio);font-size:15px}
+.duas{display:grid;gap:16px}
+.lista-ess{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.lista-ess li{display:grid;grid-template-columns:20px 1fr;gap:12px;align-items:start;font-size:16px}
+.lista-ess li svg{margin-top:3px}
+.lista-ess.fora li{color:var(--mudo)}
+.caixa{padding:26px 24px;border-radius:20px;background:linear-gradient(170deg,#2B2923,#1A1916 70%);border:1px solid #403C33;display:flex;flex-direction:column;gap:18px}
+.caixa h3{font-size:20px;font-weight:700}
+.oferta-ess{max-width:560px;margin-inline:auto;width:100%}
+.voltar-completo{text-align:center;color:var(--apoio);font-size:15px}
+.voltar-completo a{color:var(--ambar-claro)}
+@media (min-width:860px){.duas{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Corpo Primaz, início"><img src="assets/simbolo.png" alt=""><span>CORPO PRIMAZ</span></a>
+    <a class="btn" href="#oferta" data-checkout="essencial">Quero o Essencial</a>
+  </div>
+</nav>
+
+<main id="inicio">
+<section class="ess-hero">
+  <img class="marca-d" src="assets/simbolo.png" alt="">
+  <div class="wrap">
+    <span class="rotulo">Raio-X Biomecânico · Essencial</span>
+    <h1>Prefere seguir no seu ritmo? <span class="virada">O essencial do método, por um valor menor.</span></h1>
+    <p>Os testes dos 12 checkpoints, os exercícios de correção e o kinesio tape. Tudo o que você precisa para mapear e corrigir o padrão de movimento por conta própria.</p>
+    <div class="sozinho">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" style="flex:none"><circle cx="14" cy="14" r="12" fill="none" stroke="#D4A017" stroke-width="1.6"/><path d="M14 8v7M14 19v.5" stroke="#D4A017" stroke-width="2" stroke-linecap="round"/></svg>
+      <div><b>Aqui você estará sozinho na sua jornada.</b><span>Não há conversa individual, auditorias nem acompanhamento do Douglas. Você segue o método por conta própria, com o mesmo critério de passou ou reprovou.</span></div>
+    </div>
+    <a class="btn brilha" href="#oferta" style="align-self:flex-start">Ver o Essencial <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+  </div>
+</section>
+
+<section class="faixa">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:36px">
+    <div class="cabeca"><span class="rotulo">Sem surpresas</span><h2>O que tem <span class="virada">e o que fica de fora.</span></h2></div>
+    <div class="duas">
+      <div class="caixa"><h3>No Essencial</h3><ul class="lista-ess"><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5l4.5 4.5L18 6.5" fill="none" stroke="#D4A017" stroke-width="2.2"/></svg><span>Os testes dos 12 checkpoints, com gabarito visual</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5l4.5 4.5L18 6.5" fill="none" stroke="#D4A017" stroke-width="2.2"/></svg><span>Todos os exercícios de correção, na ordem certa</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5l4.5 4.5L18 6.5" fill="none" stroke="#D4A017" stroke-width="2.2"/></svg><span>Kinesio tape: as aplicações de cada fase</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5l4.5 4.5L18 6.5" fill="none" stroke="#D4A017" stroke-width="2.2"/></svg><span>Acesso por 12 meses, pela plataforma de cursos</span></li></ul></div>
+      <div class="caixa" style="background:var(--carvao-2)"><h3>Só no Raio-X Biomecânico completo</h3><ul class="lista-ess fora"><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M6 6l10 10M16 6L6 16" stroke="#857F73" stroke-width="2"/></svg><span>Videochamada e conversa individual com o Douglas</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M6 6l10 10M16 6L6 16" stroke="#857F73" stroke-width="2"/></svg><span>As 4 auditorias individuais em vídeo</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M6 6l10 10M16 6L6 16" stroke="#857F73" stroke-width="2"/></svg><span>Digitopressão e avaliação energética (MTC)</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M6 6l10 10M16 6L6 16" stroke="#857F73" stroke-width="2"/></svg><span>Módulo dental: mordida e cadeia cervical</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M6 6l10 10M16 6L6 16" stroke="#857F73" stroke-width="2"/></svg><span>App com calendário, sequência e Protocolo de Crise</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M6 6l10 10M16 6L6 16" stroke="#857F73" stroke-width="2"/></svg><span>Prioridade no suporte</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="oferta" class="faixa-ambar">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:28px">
+    <div class="cabeca centro"><span class="rotulo">Raio-X Essencial</span><h2>Comece hoje, <span class="virada">no seu ritmo.</span></h2></div>
+    <article class="plano destaque oferta-ess">
+      <span class="selo">Acesso pela plataforma</span>
+      <div class="plano-nome">RAIO-X ESSENCIAL</div>
+      <p class="plano-desc">Testes, exercícios de correção e kinesio tape dos 12 checkpoints.</p>
+      <div class="valor"><span class="vezes">12x de</span><small>R$</small><strong>103,42</strong><sup class="ast">*</sup></div>
+      <p class="valor-nota">ou <b>R$ 1.000</b> à vista · 12 meses de acesso</p>
+      <p class="juros">*Parcelamento com juros da plataforma de pagamento (3,49% ao mês). O valor exato aparece no checkout.</p>
+      <ul><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5l4.5 4.5L18 6.5" fill="none" stroke="#D4A017" stroke-width="2.2"/></svg><span>Os testes dos 12 checkpoints, com gabarito visual</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5l4.5 4.5L18 6.5" fill="none" stroke="#D4A017" stroke-width="2.2"/></svg><span>Todos os exercícios de correção, na ordem certa</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5l4.5 4.5L18 6.5" fill="none" stroke="#D4A017" stroke-width="2.2"/></svg><span>Kinesio tape: as aplicações de cada fase</span></li><li><svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5l4.5 4.5L18 6.5" fill="none" stroke="#D4A017" stroke-width="2.2"/></svg><span>Acesso por 12 meses, pela plataforma de cursos</span></li></ul>
+      <a class="btn brilha" href="#oferta" data-checkout="essencial">Quero o Raio-X Essencial</a>
+    </article>
+    <div class="garantia" style="max-width:760px;margin-inline:auto">
+      <svg width="48" height="48" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l13 5v9c0 8.5-5.6 15.4-13 18-7.4-2.6-13-9.5-13-18V9z" fill="rgba(212,160,23,.15)" stroke="#D4A017" stroke-width="1.5"/><path d="M14 20l4 4 8-9" fill="none" stroke="#D4A017" stroke-width="2"/></svg>
+      <div class="gar-texto"><b>7 dias de garantia</b><span>Se não for para você, peça o reembolso pela própria plataforma em até 7 dias.</span></div>
+    </div>
+    <p class="voltar-completo">Quer acompanhamento individual com o Douglas? <a href="https://alltoral.github.io/despertar/#planos" data-completo>Conheça o Raio-X Biomecânico completo</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap estreito" style="display:flex;flex-direction:column;gap:30px">
+    <div class="cabeca"><span class="rotulo">Perguntas frequentes</span><h2>Antes de decidir</h2></div>
+    <div class="faq">
+      <details><summary>Qual a diferença para o Raio-X Biomecânico completo?</summary><p>O Essencial tem os testes, os exercícios de correção e o kinesio tape. O completo soma a conversa individual com o Douglas, as 4 auditorias em vídeo, digitopressão, avaliação energética, módulo dental, o app de acompanhamento e prioridade no suporte.</p></details>
+      <details><summary>Vou ter algum acompanhamento?</summary><p>Não. No Essencial você segue sozinho, no seu ritmo, usando o gabarito de cada teste para saber se passou ou não.</p></details>
+      <details><summary>Como recebo o acesso?</summary><p>Logo após a confirmação do pagamento, você recebe por e-mail o acesso à área de cursos da plataforma.</p></details>
+      <details><summary>Isso substitui o médico ou a fisioterapia?</summary><p>Não. É educação postural e autoavaliação funcional guiada. Não é atendimento médico nem consulta de fisioterapia.</p></details>
+      <details><summary>Posso parcelar?</summary><p>Pode. Sai por R$ 1.000 à vista ou em até 12x de R$ 103,42 no cartão. O parcelamento tem os juros da plataforma de pagamento, e o valor exato aparece no checkout.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap rodape">
+    <a class="marca" href="#inicio"><img src="assets/simbolo.png" alt=""><span>CORPO PRIMAZ</span></a>
+    <p class="obrig">Não é atendimento médico. É autoavaliação guiada para dores persistentes.</p>
+    <p>Material de caráter educativo e de autoavaliação funcional. Não substitui avaliação clínica, consulta fisioterapêutica ou prescrição individualizada. Em caso de dor aguda, formigamento ou perda de força, procure atendimento presencial.</p>
+    <p>Responsável técnico: Douglas Toral de Souza, fisioterapeuta, CREFITO-3 111.851-F.</p>
+    <p>Corpo Primaz · Raio-X Biomecânico · <a href="https://www.instagram.com/corpo_primaz/" target="_blank" rel="noopener">@corpo_primaz</a></p>
+    <a class="credito" href="https://alltoral.netlify.app" target="_blank" rel="noopener">Desenvolvido por <b>ALL TORAL</b></a>
+  </div>
+</footer>
+<script>
+(function(){
+  /* Troque pelo link real de checkout do Essencial (Hotmart) */
+  var CHECKOUT = { essencial:'' };
+  document.querySelectorAll('[data-checkout]').forEach(function(a){ var u = CHECKOUT[a.getAttribute('data-checkout')]; if (u){ a.href = u; a.target = '_blank'; a.rel = 'noopener'; } });
+})();
+</script>
+</body>
+</html>
