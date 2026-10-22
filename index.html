@@ -363,6 +363,22 @@ footer{border-top:1px solid rgba(212,160,23,.25);padding-block:44px calc(44px + 
 .voltar-completo{text-align:center;color:var(--apoio);font-size:15px}
 .voltar-completo a{color:var(--ambar-claro)}
 @media (min-width:860px){.duas{grid-template-columns:1fr 1fr}}
+
+.termo{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(8,8,7,.8);backdrop-filter:blur(6px)}
+.termo.on{display:flex}
+.termo-box{position:relative;width:100%;max-width:680px;max-height:86vh;display:flex;flex-direction:column;border-radius:22px;background:linear-gradient(170deg,#211E17,#141311 60%);border:1px solid rgba(212,160,23,.4);box-shadow:0 40px 90px -30px rgba(0,0,0,.8)}
+.termo-cab{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;border-bottom:1px solid var(--linha)}
+.termo-cab h2{font-size:22px;line-height:1.1}
+.termo-fechar{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--linha);background:transparent;color:var(--apoio);font-size:24px;cursor:pointer}
+.termo-corpo{overflow-y:auto;padding:6px 22px 24px;-webkit-overflow-scrolling:touch}
+.termo-corpo p{color:var(--apoio);font-size:15px;line-height:1.6}
+
+.termo-corpo p{margin:0 0 10px}
+.termo-corpo p strong{color:var(--texto)}
+.termo-aviso{margin:14px 0 18px;padding:16px 18px;border-radius:14px;border:1px dashed rgba(212,160,23,.5);background:rgba(212,160,23,.07)}
+.termo-aviso p{color:var(--ambar-claro)!important;font-size:14px!important}
+.termo-rec{padding-left:14px}
+.link-termos{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer}
 </style>
 </head>
 <body>
@@ -440,14 +456,297 @@ footer{border-top:1px solid rgba(212,160,23,.25);padding-block:44px calc(44px + 
     <p>Material de caráter educativo e de autoavaliação funcional. Não substitui avaliação clínica, consulta fisioterapêutica ou prescrição individualizada. Em caso de dor aguda, formigamento ou perda de força, procure atendimento presencial.</p>
     <p>Responsável técnico: Douglas Toral de Souza, fisioterapeuta, CREFITO-3 111.851-F.</p>
     <p>Corpo Primaz · Raio-X Biomecânico · <a href="https://www.instagram.com/corpoprimaz/" target="_blank" rel="noopener">@corpoprimaz</a></p>
+    <p><button class="link-termos" type="button" data-termos-uso>Termos e Condições de Uso</button></p>
     <a class="credito" href="https://alltoral.netlify.app" target="_blank" rel="noopener">Desenvolvido por <b>ALL TORAL</b></a>
   </div>
 </footer>
+<div class="termo" id="termos-uso" role="dialog" aria-modal="true" aria-labelledby="termos-uso-titulo" aria-hidden="true">
+  <div class="termo-box">
+    <div class="termo-cab"><h2 id="termos-uso-titulo">Termos e Condições de Uso</h2><button class="termo-fechar" type="button" aria-label="Fechar" data-fechar-modal>×</button></div>
+    <div class="termo-corpo"><p><strong>CORPO PRIMAZ — CONTEÚDOS EDUCATIVOS, MATERIAIS DIGITAIS E FERRAMENTAS DE AUTOAVALIAÇÃO<br />
+Versão 2.0 — Última atualização: 22 de outubro de 2026</strong></p>
+<div class="termo-aviso"><p><strong>AVISO IMPORTANTE DE SAÚDE</strong></p>
+<p>O Corpo Primaz oferece conteúdo educativo, materiais digitais e ferramentas de autoavaliação sobre biomecânica, movimento corporal e fatores associados a dores e desconfortos musculoesqueléticos. Não se trata de serviço de saúde, de consulta, de diagnóstico, de prescrição de tratamento ou de acompanhamento clínico. As ferramentas de autoavaliação não identificam a causa de uma dor e não substituem avaliação individualizada por profissional de saúde habilitado.<br />
+<br />
+Interrompa imediatamente qualquer teste e procure atendimento presencial se apresentar: dor intensa ou que piora durante o teste, perda de força, perda de sensibilidade, alteração do controle urinário ou fecal, febre, perda de peso não intencional, tontura, desmaio, dor após trauma significativo ou piora progressiva dos sintomas. Em situação de emergência, procure o SAMU (192) ou o pronto atendimento mais próximo.</p></div>
+
+<h1 id="identificação-do-fornecedor"><strong>1. IDENTIFICAÇÃO DO FORNECEDOR</strong></h1>
+<div class="termo-rec">
+<p>1.1. O Corpo Primaz é operado por Douglas Toral de Souza, inscrito no CNPJ sob o nº 63.220.507/0001-70, com sede em Avenida Mendes da Rocha, 28, São Paulo/SP, CEP 02227-000, doravante denominado "Corpo Primaz" ou "Fornecedor".</p>
+<p>1.2. Responsável técnico: Douglas Toral de Souza, fisioterapeuta, CREFITO-3 111.851-F.</p>
+<p>1.3. Encarregado pelo tratamento de dados pessoais (Encarregado ou DPO), nos termos do art. 41 da Lei nº 13.709/2018: Douglas Toral De Souza, contato suporte@corpoprimaz.com.br.</p>
+<p>1.4. Canais oficiais de atendimento: suporte@corpoprimaz.com.br, www.corpoprimaz.com.br. Prazo de resposta: até 2 dias úteis.</p>
+<p>1.5. Estes Termos e Condições de Uso ("Termos") regulam o acesso e o uso do site, da área de membros, dos materiais digitais, dos conteúdos educativos e das ferramentas de autoavaliação disponibilizados pelo Corpo Primaz (em conjunto, "Plataforma").</p>
+</div>
+<h1 id="definições"><strong>2. DEFINIÇÕES</strong></h1>
+<div class="termo-rec">
+<p>2.1. Plataforma: conjunto de páginas, áreas restritas, materiais e ferramentas operados pelo Corpo Primaz.</p>
+<p>2.2. Conteúdo: textos, aulas, vídeos, áudios, exercícios, orientações, protocolos, materiais em PDF, planilhas, checklists e demais materiais disponibilizados.</p>
+<p>2.3. Ferramenta de Autoavaliação: testes, questionários, escalas e instrumentos de autopercepção respondidos pelo próprio Usuário, cujo resultado tem caráter exclusivamente educativo e orientativo.</p>
+<p>2.4. Produto: cada oferta de conteúdo ou serviço disponibilizada gratuitamente ou mediante pagamento, isolada ou em conjunto.</p>
+<p>2.5. Oferta: página, e-mail, mensagem ou documento que descreve um Produto, seu conteúdo, preço, forma de pagamento, prazo de acesso e condições específicas.</p>
+<p>2.6. Área de Membros: ambiente restrito de acesso ao conteúdo adquirido.</p>
+<p>2.7. Usuário: pessoa natural que acessa a Plataforma ou utiliza os Conteúdos.</p>
+<p>2.8. Contrato: vínculo formado por estes Termos, pela Oferta e pelos Documentos Integrantes.</p>
+<p>2.9. Documentos Integrantes: estes Termos, a Política de Privacidade, a Oferta aplicável e o Termo de Consentimento para Dados Sensíveis, quando houver.</p>
+</div>
+<h1 id="aceitação-dos-termos"><strong>3. ACEITAÇÃO DOS TERMOS</strong></h1>
+<div class="termo-rec">
+<p>3.1. A aceitação destes Termos ocorre de forma expressa quando o Usuário marca a caixa "Li e aceito os Termos e Condições de Uso" e conclui o cadastro.</p>
+<p>3.2. Nos acessos a Conteúdos gratuitos disponibilizados sem cadastro, a utilização dos materiais implica aceitação destes Termos.</p>
+<p>3.3. O Usuário declara que leu e compreendeu o conteúdo destes Termos, inclusive o Aviso Importante de Saúde da cláusula 8.</p>
+<p>3.4. O Corpo Primaz registra a versão aceita, a data e os dados de conexão, para fins de comprovação, nos limites da legislação aplicável.</p>
+<p>3.5. Caso não concorde com qualquer disposição, o Usuário deve abster-se de utilizar a Plataforma e os Conteúdos.</p>
+</div>
+<h1 id="cadastro-conta-e-credenciais"><strong>4. CADASTRO, CONTA E CREDENCIAIS</strong></h1>
+<div class="termo-rec">
+<p>4.1. O acesso a determinados Conteúdos pode exigir cadastro, com fornecimento de dados verdadeiros, exatos e atualizados.</p>
+<p>4.2. O Usuário é responsável pela veracidade dos dados informados e pela atualização das informações de contato.</p>
+<p>4.3. As credenciais de acesso são pessoais, individuais e intransferíveis, sendo vedado o compartilhamento, a cessão, a revenda ou o uso simultâneo por terceiros.</p>
+<p>4.4. O Usuário responde pelas atividades realizadas com suas credenciais e deve comunicar imediatamente qualquer uso não autorizado.</p>
+<p>4.5. O Corpo Primaz poderá adotar medidas técnicas de verificação de uso, incluindo registro de acessos, para segurança da Plataforma e proteção do conteúdo.</p>
+<p>4.6. Dados de cadastro incompletos, inverídicos ou não confirmados poderão impedir ou suspender o acesso.</p>
+</div>
+<h1 id="capacidade-civil-e-menores-de-idade"><strong>5. CAPACIDADE CIVIL E MENORES DE IDADE</strong></h1>
+<div class="termo-rec">
+<p>5.1. O Usuário declara ter capacidade civil plena e, quando aplicável, ser o titular do meio de pagamento utilizado.</p>
+<p>5.2. Menores de 18 anos somente poderão utilizar a Plataforma com assistência ou representação de responsável legal, nos termos do art. 14 da LGPD e da legislação civil e consumerista.</p>
+<p>5.3. Conteúdos que envolvam dados de saúde de menores exigem consentimento específico do responsável legal, em fluxo próprio.</p>
+<p>5.4. O Corpo Primaz poderá suspender contas cuja titularidade por menor seja identificada sem o devido consentimento, preservando o direito de reembolso quando cabível.</p>
+</div>
+<h1 id="objeto-sobre-o-corpo-primaz"><strong>6. OBJETO — SOBRE O CORPO PRIMAZ</strong></h1>
+<div class="termo-rec">
+<p>6.1. O Corpo Primaz disponibiliza conteúdos educativos, materiais digitais e ferramentas de autoavaliação relacionados à biomecânica, ao movimento corporal e a fatores associados a dores e desconfortos musculoesqueléticos.</p>
+<p>6.2. Os Produtos podem ser organizados em níveis progressivos de profundidade e incluir, entre outros: testes e questionários de autoavaliação; orientações educativas; aulas e vídeos; exercícios educativos; materiais de apoio em PDF; protocolos de segurança e conduta; e recursos complementares descritos na respectiva Oferta.</p>
+<p>6.3. A descrição atualizada de cada Produto, sua composição, o escopo das camadas incluídas e o prazo de acesso constam da respectiva Oferta, que integra estes Termos para todos os fins.</p>
+<p>6.4. O Corpo Primaz poderá realizar atualizações técnicas, correções e melhorias nos Conteúdos, preservando o escopo essencial contratado.</p>
+</div>
+<h1 id="natureza-educativa-e-limites-dos-conteúdos"><strong>7. NATUREZA EDUCATIVA E LIMITES DOS CONTEÚDOS</strong></h1>
+<div class="termo-rec">
+<p>7.1. Os Conteúdos possuem finalidade educativa e informativa.</p>
+<p>7.2. As Ferramentas de Autoavaliação não constituem, isoladamente, diagnóstico clínico e não substituem consulta, exame físico, exame de imagem ou avaliação individualizada por profissional de saúde habilitado.</p>
+<p>7.3. O acesso aos Conteúdos não garante a identificação da causa de uma dor, a prevenção de doenças, a eliminação de sintomas ou qualquer resultado terapêutico específico.</p>
+<p>7.4. A utilização da Plataforma não estabelece relação clínica, terapêutica, de acompanhamento ou de assistência individual entre o Usuário e o Corpo Primaz ou qualquer profissional de saúde.</p>
+<p>7.5. Nenhum Conteúdo deve ser interpretado como prescrição individualizada de exercícios, conduta diagnóstica, indicação cirúrgica, orientação medicamentosa ou substituto de avaliação presencial.</p>
+<p>7.6. Cada pessoa apresenta características individuais e pode necessitar de avaliação profissional adequada à sua situação.</p>
+<p>7.7. Resultados apresentados por Ferramentas de Autoavaliação são hipóteses educativas de autopercepção, não conclusões clínicas, e não devem ser utilizados para iniciar, suspender ou substituir tratamento.</p>
+</div>
+<h1 id="ferramentas-de-autoavaliação-contraindicações-e-sinais-de-alarme"><strong>8. FERRAMENTAS DE AUTOAVALIAÇÃO — CONTRAINDICAÇÕES E SINAIS DE ALARME</strong></h1>
+<div class="termo-rec">
+<p>8.1. Antes de realizar qualquer teste, o Usuário declara não apresentar, ou ter recebido liberação expressa de profissional habilitado quanto a, qualquer das seguintes condições:</p>
+<p>a) fratura recente ou em consolidação;</p>
+<p>b) pós-operatório recente ou em período de restrição de movimento;</p>
+<p>c) processo infeccioso, inflamatório ou tumoral em investigação;</p>
+<p>d) dor acompanhada de sinais de alarme;</p>
+<p>e) gestação de risco ou restrição médica ao esforço;</p>
+<p>f) tontura, desequilíbrio ou alteração da marcha sem avaliação;</p>
+<p>g) doença cardiovascular, respiratória ou metabólica descompensada;</p>
+<p>h) uso de medicação que altere sensibilidade, equilíbrio ou percepção de esforço.</p>
+<p>8.2. São sinais de alarme que exigem interrupção imediata do teste e busca de atendimento presencial: dor intensa ou crescente; perda de força; perda ou alteração de sensibilidade; alteração do controle urinário ou fecal; dor irradiada com parestesia progressiva; febre; perda de peso não intencional; tontura, desmaio ou visão turva; dor após trauma significativo; piora progressiva dos sintomas.</p>
+<p>8.3. Diante de qualquer sinal de alarme, o Usuário deve interromper a atividade, não insistir no teste e procurar avaliação profissional. Em emergência, deve acionar o SAMU (192) ou dirigir-se ao pronto atendimento mais próximo.</p>
+<p>8.4. Os Conteúdos podem incluir protocolo educativo de conduta em situações de crise de dor. Esse protocolo tem natureza informativa e não substitui atendimento profissional.</p>
+<p>8.5. Alguns Produtos podem adotar liberação progressiva de conteúdo, com desbloqueio por etapas, como recurso pedagógico de segurança e de adesão. Essa característica será informada na Oferta aplicável.</p>
+<p>8.6. O Usuário é o único responsável por avaliar sua própria condição e por decidir sobre a realização dos testes, cabendo-lhe buscar liberação profissional quando houver dúvida.</p>
+</div>
+<h1 id="responsabilidade-do-usuário-e-uso-seguro"><strong>9. RESPONSABILIDADE DO USUÁRIO E USO SEGURO</strong></h1>
+<div class="termo-rec">
+<p>9.1. O Usuário compromete-se a utilizar os Conteúdos de maneira responsável, respeitando suas próprias limitações físicas e as orientações de segurança disponibilizadas.</p>
+<p>9.2. O Usuário deve realizar os testes em ambiente adequado, com superfície estável, espaço livre e, quando necessário, apoio de terceiro.</p>
+<p>9.3. A utilização dos materiais não elimina a necessidade de acompanhamento profissional quando indicado.</p>
+<p>9.4. O Usuário não deve utilizar os Conteúdos para autodiagnóstico, para substituir tratamento em curso ou para orientar terceiros.</p>
+</div>
+<h1 id="acesso-prazo-disponibilidade-e-suporte"><strong>10. ACESSO, PRAZO, DISPONIBILIDADE E SUPORTE</strong></h1>
+<div class="termo-rec">
+<p>10.1. O acesso aos materiais gratuitos seguirá as condições apresentadas na respectiva página de cadastro.</p>
+<p>10.2. Salvo disposição diversa na Oferta, o acesso aos Produtos pagos é pessoal, individual e intransferível, pelo prazo de 12 meses contados da confirmação do pagamento.</p>
+<p>10.3. A Oferta deverá informar, de forma clara e ostensiva: conteúdo incluído, camadas abrangidas, preço total, formas de pagamento, eventuais tributos, prazo de acesso, canal de suporte e condições de reembolso.</p>
+<p>10.4. O Corpo Primaz envidará esforços comercialmente razoáveis para manter a Plataforma disponível, observando janelas de manutenção programada e eventos de caso fortuito ou força maior.</p>
+<p>10.5. Eventuais indisponibilidades programadas serão comunicadas com antecedência razoável, quando possível.</p>
+<p>10.6. Caso o Produto seja descontinuado antes do término do prazo contratado, o Corpo Primaz garantirá acesso ao conteúdo por prazo equivalente ou restituição proporcional ao período não usufruído.</p>
+<p>10.7. Suporte: suporte@corpoprimaz.com.br, com atendimento em até 2 dias úteis.</p>
+</div>
+<h1 id="produtos-pagos-pagamento-e-inadimplência"><strong>11. PRODUTOS PAGOS, PAGAMENTO E INADIMPLÊNCIA</strong></h1>
+<div class="termo-rec">
+<p>11.1. A aquisição de Produtos pagos está sujeita às condições da respectiva Oferta e às disposições legais aplicáveis.</p>
+<p>11.2. O pagamento pode ser realizado por meio dos prestadores de serviço indicados na Oferta, sujeitos aos seus próprios termos.</p>
+<p>11.3. O acesso é liberado após a confirmação do pagamento pela instituição processadora.</p>
+<p>11.4. Em caso de parcelamento, o inadimplemento de qualquer parcela poderá implicar suspensão do acesso, mediante aviso prévio, sem prejuízo do direito de reembolso dos valores já pagos na hipótese de rescisão.</p>
+<p>11.5. Valores eventualmente pagos a título de tributos, tarifas ou encargos de terceiros serão informados na Oferta.</p>
+<p>11.6. O Corpo Primaz não se responsabiliza por falhas do ambiente do Usuário, de conexão à internet ou de dispositivos, sem prejuízo dos deveres de informação e cooperação.</p>
+</div>
+<h1 id="direito-de-arrependimento-reembolso-e-garantia-legal"><strong>12. DIREITO DE ARREPENDIMENTO, REEMBOLSO E GARANTIA LEGAL</strong></h1>
+<div class="termo-rec">
+<p>12.1. Nas contratações realizadas fora do estabelecimento comercial, inclusive pela internet, o consumidor pode exercer o direito de arrependimento no prazo de 7 (sete) dias corridos, contados da contratação ou do recebimento do Produto, nos termos do art. 49 do Código de Defesa do Consumidor, sem necessidade de justificativa.</p>
+<p>12.2. O acesso antecipado ao Conteúdo, inclusive integral, não suprime nem reduz o direito previsto em 12.1.</p>
+<p>12.3. O pedido de arrependimento deve ser dirigido a suporte@corpoprimaz.com.br, com identificação do Usuário e do pedido.</p>
+<p>12.4. O reembolso integral será processado em até 10 dias úteis contados da solicitação, na mesma forma de pagamento utilizada, ou por transferência, quando inviável.</p>
+<p>12.5. Eventual garantia comercial adicional oferecida na Oferta será aplicada conforme suas próprias condições, sem prejuízo do direito de arrependimento e da garantia legal.</p>
+<p>12.6. A garantia legal de adequação do Produto observa os prazos do art. 26 do Código de Defesa do Consumidor, contados da entrega do conteúdo.</p>
+<p>12.7. Nenhuma disposição destes Termos será interpretada como renúncia ou restrição aos direitos garantidos ao consumidor por lei.</p>
+</div>
+<h1 id="propriedade-intelectual-e-licença-de-uso"><strong>13. PROPRIEDADE INTELECTUAL E LICENÇA DE USO</strong></h1>
+<div class="termo-rec">
+<p>13.1. Os textos, vídeos, áudios, materiais digitais, métodos, marcas, elementos visuais, layout, identidade visual e demais Conteúdos são protegidos pela Lei nº 9.610/1998, pela Lei nº 9.279/1996 e pela legislação aplicável.</p>
+<p>13.2. O Corpo Primaz concede ao Usuário licença limitada, pessoal, não exclusiva, intransferível, não sublicenciável e revogável para acessar e utilizar os Conteúdos para fins próprios, pessoais e não comerciais.</p>
+<p>13.3. É vedado ao Usuário reproduzir, distribuir, comercializar, compartilhar publicamente, ceder, revender, sublicenciar, traduzir, adaptar, criar obras derivadas ou explorar comercialmente os Conteúdos, no todo ou em parte, sem autorização prévia e escrita do titular, salvo nas hipóteses permitidas por lei.</p>
+<p>13.4. É vedado remover avisos de direitos autorais, marcas d'água ou mecanismos de proteção.</p>
+<p>13.5. O acesso aos Conteúdos não transfere ao Usuário qualquer direito de propriedade intelectual sobre eles.</p>
+<p>13.6. A violação desta cláusula sujeita o infrator às sanções civis e penais cabíveis, incluindo indenização por perdas e danos, sem prejuízo das medidas da cláusula 14.</p>
+</div>
+<h1 id="condutas-proibidas-e-medidas"><strong>14. CONDUTAS PROIBIDAS E MEDIDAS</strong></h1>
+<div class="termo-rec">
+<p>14.1. É vedado ao Usuário:</p>
+<p>a) utilizar a Plataforma para finalidades ilícitas ou contrárias à ordem pública;</p>
+<p>b) tentar comprometer a segurança, a integridade ou o funcionamento da Plataforma;</p>
+<p>c) acessar indevidamente sistemas, áreas restritas ou dados de terceiros;</p>
+<p>d) distribuir, gravar, transmitir ou publicar Conteúdos protegidos sem autorização;</p>
+<p>e) compartilhar credenciais, revender acesso ou permitir uso por terceiros;</p>
+<p>f) utilizar mecanismos automatizados de extração de conteúdo sem autorização;</p>
+<p>g) reproduzir afirmações de resultado terapêutico ou diagnóstico a partir dos Conteúdos;</p>
+<p>h) praticar assédio, ofensa ou discriminação em espaços de interação mantidos pelo Corpo Primaz.</p>
+<p>14.2. O descumprimento poderá resultar, de forma proporcional e fundamentada, em: advertência; suspensão temporária do acesso; bloqueio de funcionalidades; rescisão do Contrato; e adoção das medidas judiciais cabíveis.</p>
+<p>14.3. Em caso de rescisão por conduta do Usuário, o Corpo Primaz restituirá os valores correspondentes ao período não usufruído, quando cabível, observada a legislação consumerista.</p>
+<p>14.4. O Usuário será previamente comunicado sobre a medida aplicada, salvo quando a comunicação imediata comprometer a segurança da Plataforma ou de terceiros.</p>
+<p>14.5. O Usuário poderá apresentar contraditório pelo canal suporte@corpoprimaz.com.br, no prazo de 10 dias.</p>
+</div>
+<h1 id="conteúdo-e-informações-enviados-pelo-usuário"><strong>15. CONTEÚDO E INFORMAÇÕES ENVIADOS PELO USUÁRIO</strong></h1>
+<div class="termo-rec">
+<p>15.1. O Usuário é responsável pelas respostas, relatos e informações que insere nas Ferramentas de Autoavaliação e nos canais de atendimento, comprometendo-se a fornecer dados verdadeiros.</p>
+<p>15.2. Informações de saúde inseridas serão tratadas conforme a cláusula 17 e a Política de Privacidade.</p>
+<p>15.3. O Usuário não deve inserir dados de terceiros sem autorização, especialmente dados de saúde.</p>
+<p>15.4. Depoimentos e imagens eventualmente enviados espontaneamente somente serão utilizados com autorização específica e revogável do titular, inclusive quanto ao uso de imagem.</p>
+</div>
+<h1 id="proteção-de-dados-pessoais-lgpd"><strong>16. PROTEÇÃO DE DADOS PESSOAIS — LGPD</strong></h1>
+<div class="termo-rec">
+<p>16.1. O Corpo Primaz atua como controlador dos dados pessoais tratados na Plataforma, nos termos da Lei nº 13.709/2018 (LGPD).</p>
+<p>16.2. Dados tratados: dados de cadastro (nome, e-mail, telefone, CPF ou documento, data de nascimento, endereço); dados de navegação e de uso da Plataforma; dados de pagamento, processados por terceiros; e dados de saúde informados nas Ferramentas de Autoavaliação.</p>
+<p>16.3. Bases legais: consentimento específico e destacado para dados de saúde (art. 11, I); execução de contrato para dados de cadastro e de uso (art. 7º, V); cumprimento de obrigação legal ou regulatória para registros fiscais e de acesso (art. 7º, II); legítimo interesse para segurança, prevenção a fraudes e melhoria do serviço (art. 7º, IX); e exercício regular de direitos (art. 7º, VI).</p>
+<p>16.4. Finalidades: viabilizar acesso aos Conteúdos; personalizar a entrega dos materiais; prestar suporte; enviar comunicações informativas e de segurança; cumprir obrigações legais; e melhorar a Plataforma.</p>
+<p>16.5. Compartilhamento: os dados poderão ser compartilhados com prestadores de serviço de hospedagem, pagamento, e-mail, comunicação e automação, estritamente para as finalidades informadas, e com autoridades públicas, quando legalmente exigido.</p>
+<p>16.6. Transferência internacional: eventual transferência observará os arts. 33 a 36 da LGPD, com salvaguardas contratuais adequadas.</p>
+<p>16.7. Retenção: os dados serão mantidos enquanto necessários às finalidades, pelo prazo contratual e pelos prazos legais aplicáveis, especialmente fiscais, e após por prazo necessário à comprovação e ao exercício regular de direitos.</p>
+<p>16.8. Direitos do titular: o Usuário pode exercer os direitos dos arts. 18 e 19 da LGPD, especialmente confirmação, acesso, correção, anonimização, bloqueio, eliminação, portabilidade, informação sobre compartilhamento e revogação de consentimento, pelo canal suporte@corpoprimaz.com.br, com resposta em até 15 (quinze) dias contados do recebimento da solicitação, nos termos do art. 19 da LGPD.</p>
+<p>16.9. Os prazos de resposta são distintos conforme a natureza da solicitação: (i) solicitações de atendimento geral, dúvidas sobre o conteúdo, suporte técnico e questões contratuais são respondidas em até 2 (dois) dias úteis, conforme as cláusulas 1.4, 10.7 e 27.2; e (ii) solicitações de exercício de direitos de titular de dados pessoais, previstas nos arts. 18 e 19 da LGPD, são respondidas em até 15 (quinze) dias contados do recebimento do pedido.</p>
+<p>16.10. Segurança: o Corpo Primaz adota medidas técnicas e administrativas adequadas, incluindo controle de acesso, registro de atividades e proteção das credenciais.</p>
+<p>16.11. Incidentes: em caso de incidente de segurança relevante, o Corpo Primaz comunicará os titulares e a Autoridade Nacional de Proteção de Dados, nos termos do art. 48 da LGPD.</p>
+<p>16.12. Encarregado: Douglas Toral de Souza, pelo contato suporte@corpoprimaz.com.br.</p>
+<p>16.13. A Política de Privacidade detalha as informações desta cláusula e integra estes Termos para todos os fins.</p>
+</div>
+<h1 id="dados-sensíveis-de-saúde"><strong>17. DADOS SENSÍVEIS DE SAÚDE</strong></h1>
+<div class="termo-rec">
+<p>17.1. Os dados informados em testes e questionários de autopercepção — região e intensidade da dor, histórico, limitações funcionais, rotina e sintomas — são dados pessoais sensíveis referentes à saúde, nos termos do art. 5º, II, da LGPD.</p>
+<p>17.2. O tratamento desses dados é realizado com base em consentimento específico e destacado, coletado em fluxo próprio, granular e anterior ao preenchimento dos testes, nos termos do art. 11, I, da LGPD.</p>
+<p>17.3. O consentimento pode ser revogado a qualquer tempo, mediante solicitação ao canal suporte@corpoprimaz.com.br, sem prejuízo do uso lícito anterior.</p>
+<p>17.4. A revogação poderá implicar impossibilidade de manutenção do acesso a funcionalidades que dependam desses dados, o que será informado previamente.</p>
+<p>17.5. Os dados de saúde não serão utilizados para finalidades diferentes das informadas, nem compartilhados com terceiros para fins publicitários.</p>
+<p>17.6. O Corpo Primaz não realiza diagnóstico e não utiliza os dados de saúde para prestar serviço clínico individualizado.</p>
+</div>
+<h1 id="comunicações"><strong>18. COMUNICAÇÕES</strong></h1>
+<div class="termo-rec">
+<p>18.1. O Usuário autoriza o recebimento de comunicações operacionais, relacionadas ao acesso, pagamento, suporte e segurança.</p>
+<p>18.2. Comunicações de marketing serão enviadas nos termos da LGPD e da legislação aplicável, com possibilidade de descadastro a qualquer tempo.</p>
+<p>18.3. O descadastro de comunicações de marketing não interrompe comunicações essenciais de natureza contratual ou legal.</p>
+</div>
+<h1 id="serviços-de-terceiros"><strong>19. SERVIÇOS DE TERCEIROS</strong></h1>
+<div class="termo-rec">
+<p>19.1. A Plataforma pode integrar serviços de terceiros, como meios de pagamento, hospedagem, plataformas de e-mail, aplicativos de mensagem e ferramentas de automação.</p>
+<p>19.2. O uso desses serviços pode estar sujeito a termos e políticas próprios, cuja leitura é recomendada.</p>
+<p>19.3. O Corpo Primaz responde pelos serviços que integra à sua cadeia de fornecimento nos termos da legislação consumerista, sem prejuízo do direito de regresso contra o terceiro causador do dano.</p>
+</div>
+<h1 id="limitação-de-responsabilidade"><strong>20. LIMITAÇÃO DE RESPONSABILIDADE</strong></h1>
+<div class="termo-rec">
+<p>20.1. O Corpo Primaz responde pelos danos que causar, na forma da legislação aplicável, observados o Código de Defesa do Consumidor e o Código Civil.</p>
+<p>20.2. O Corpo Primaz não responde por danos decorrentes de: uso dos Conteúdos em desacordo com estes Termos e com as orientações de segurança; realização de testes em desacordo com as contraindicações da cláusula 8; interrupção de tratamento ou substituição de acompanhamento profissional por iniciativa do Usuário; informações incorretas fornecidas pelo Usuário; e falhas de conexão, dispositivos ou ambientes externos.</p>
+<p>20.3. O disposto em 20.2 não exclui nem limita a responsabilidade do Corpo Primaz por dolo ou culpa grave, por vício ou defeito do Produto, por danos decorrentes do tratamento de dados pessoais realizados em desacordo com a LGPD, nem por qualquer direito assegurado ao consumidor por lei.</p>
+<p>20.4. Eventual limitação de valor, quando admissível, será expressamente indicada na Oferta, jamais alcançando as hipóteses do item 20.3.</p>
+</div>
+<h1 id="indenização"><strong>21. INDENIZAÇÃO</strong></h1>
+<div class="termo-rec">
+<p>21.1. O Usuário responde pelos prejuízos que causar ao Corpo Primaz ou a terceiros em razão de violação destes Termos, de direitos de propriedade intelectual ou de normas legais.</p>
+<p>21.2. A responsabilidade do Usuário não alcança hipóteses de exercício regular de direitos, de denúncia de irregularidades ou de relato de experiência adversa.</p>
+</div>
+<h1 id="atualizações-destes-termos"><strong>22. ATUALIZAÇÕES DESTES TERMOS</strong></h1>
+<div class="termo-rec">
+<p>22.1. Estes Termos poderão ser atualizados para refletir mudanças nos serviços, nas práticas do Corpo Primaz ou nas exigências legais.</p>
+<p>22.2. A versão vigente permanecerá disponível nos canais oficiais, com indicação da data de atualização.</p>
+<p>22.3. Alterações materiais serão comunicadas com antecedência mínima de 30 dias, por e-mail ou aviso na Plataforma.</p>
+<p>22.4. O Usuário poderá rescindir o Contrato sem ônus caso não concorde com a alteração material, com restituição proporcional dos valores pagos pelo período não usufruído.</p>
+<p>22.5. Quando a alteração exigir nova aceitação, esta será solicitada de forma expressa e registrada.</p>
+<p>22.6. As condições vigentes na data da contratação permanecem aplicáveis aos contratos já firmados quanto aos direitos adquiridos.</p>
+</div>
+<h1 id="vigência-rescisão-e-sobrevivência"><strong>23. VIGÊNCIA, RESCISÃO E SOBREVIVÊNCIA</strong></h1>
+<div class="termo-rec">
+<p>23.1. Estes Termos vigoram por prazo indeterminado, enquanto perdurar o acesso do Usuário à Plataforma, sem prejuízo do prazo de acesso contratado para cada Produto.</p>
+<p>23.2. O Usuário pode solicitar o encerramento de sua conta pelo canal suporte@corpoprimaz.com.br.</p>
+<p>23.3. O encerramento não afasta obrigações pendentes de pagamento nem direitos adquiridos.</p>
+<p>23.4. Permanecerão em vigor após o término, independentemente do motivo: as cláusulas 13 (propriedade intelectual), 16 e 17 (proteção de dados), 20 e 21 (responsabilidade e indenização), 26 (lei aplicável e foro) e as demais que, por sua natureza, devam subsistir.</p>
+<p>23.5. O Corpo Primaz poderá descontinuar a Plataforma, mediante comunicação prévia e preservação do acesso ao conteúdo contratado pelo prazo devido ou restituição proporcional.</p>
+</div>
+<h1 id="cessão-e-alterações-subjetivas"><strong>24. CESSÃO E ALTERAÇÕES SUBJETIVAS</strong></h1>
+<div class="termo-rec">
+<p>24.1. O Usuário não poderá ceder ou transferir sua posição contratual sem anuência prévia do Corpo Primaz.</p>
+<p>24.2. O Corpo Primaz poderá ceder sua posição contratual em caso de reorganização societária, desde que preservados os direitos do Usuário, mediante comunicação.</p>
+</div>
+<h1 id="independência-das-cláusulas-e-tolerância"><strong>25. INDEPENDÊNCIA DAS CLÁUSULAS E TOLERÂNCIA</strong></h1>
+<div class="termo-rec">
+<p>25.1. A eventual nulidade ou ineficácia de qualquer disposição não afetará as demais, que permanecerão válidas.</p>
+<p>25.2. A tolerância quanto ao descumprimento de qualquer obrigação não constitui renúncia, novação ou alteração contratual.</p>
+</div>
+<h1 id="lei-aplicável-e-foro"><strong>26. LEI APLICÁVEL E FORO</strong></h1>
+<div class="termo-rec">
+<p>26.1. Estes Termos são regidos pelas leis brasileiras, em especial pelo Código de Defesa do Consumidor, pelo Código Civil, pelo Marco Civil da Internet e pela LGPD.</p>
+<p>26.2. Fica eleito o foro do domicílio do Usuário consumidor para dirimir controvérsias, quando aplicável a legislação consumerista.</p>
+<p>26.3. Nas relações não submetidas ao Código de Defesa do Consumidor, fica eleito o foro da comarca de São Paulo/SP, com renúncia a qualquer outro, por mais privilegiado que seja.</p>
+<p>26.4. As partes se comprometem a tentar solução consensual antes de eventual medida judicial.</p>
+</div>
+<h1 id="contato-e-atendimento"><strong>27. CONTATO E ATENDIMENTO</strong></h1>
+<div class="termo-rec">
+<p>27.1. Corpo Primaz — Douglas Toral de Souza, CNPJ 63.220.507/0001-70, com sede em Avenida Mendes da Rocha,28, São Paulo, SP.</p>
+<p>27.2. Atendimento ao Usuário: suporte@corpoprimaz.com.br . Prazo de resposta: até 2 dias úteis.</p>
+<p>27.3. Encarregado pelo tratamento de dados: Douglas Toral de Souza, E-MAIL: suporte@corpoprimaz.com.br.</p>
+<p>27.4. Responsável técnico: Douglas Toral de Souza, CREFITO-3 111.851-F.</p>
+</div>
+<h1 id="disposições-finais"><strong>28. DISPOSIÇÕES FINAIS</strong></h1>
+<div class="termo-rec">
+<p>28.1. Estes Termos, a Política de Privacidade, o Termo de Consentimento para Dados Sensíveis e a Oferta aplicável constituem o acordo integral entre as partes quanto ao objeto.</p>
+<p>28.2. A Oferta integra o Contrato para todos os fins, prevalecendo, em caso de conflito sobre condições comerciais específicas, a disposição mais favorável ao consumidor.</p>
+<p>28.3. Títulos e numeração são meramente referenciais e não afetam a interpretação.</p>
+<p>28.4. As partes reconhecem a boa-fé objetiva como critério de interpretação e execução do Contrato.</p>
+<p>28.5. Este documento não substitui parecer jurídico individualizado, nem afasta a observância das normas éticas e publicitárias aplicáveis à atuação profissional em saúde.</p>
+</div>
+<h1 id="anexo-i-termo-de-consentimento-para-tratamento-de-dados-sensíveis-de-saúde-modelo-de-tela"><strong>ANEXO I — TERMO DE CONSENTIMENTO PARA TRATAMENTO DE DADOS SENSÍVEIS DE SAÚDE (MODELO DE TELA)</strong></h1>
+<div class="termo-rec">
+<p>Texto do modelo, em blocos curtos e destacados:<br />
+<br />
+• Declaração de que as respostas são dados sensíveis de saúde;<br />
+• Finalidade exclusivamente educativa e de personalização da experiência;<br />
+• Base legal (art. 11, I, LGPD);<br />
+• Caráter opcional e possibilidade de revogação a qualquer tempo;<br />
+• Canal de revogação;<br />
+• Confirmação de que o consentimento é granular e destacado de outros consentimentos;<br />
+• Caixa de seleção não pré-marcada;<br />
+• Registro de data, hora e versão.</p>
+</div>
+</div>
+  </div>
+</div>
+
 <script>
 (function(){
   /* Troque pelo link real de checkout do Essencial (Hotmart) */
   var CHECKOUT = { essencial:'' };
   document.querySelectorAll('[data-checkout]').forEach(function(a){ var u = CHECKOUT[a.getAttribute('data-checkout')]; if (u){ a.href = u; a.target = '_blank'; a.rel = 'noopener'; } });
+
+  /* Termos e Condições em pop-up */
+  (function(){
+    var t = document.getElementById('termos-uso'); if (!t) return; var ultimo = null;
+    function abrir(e){ if (e) e.preventDefault(); ultimo = document.activeElement; t.classList.add('on'); t.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; t.querySelector('.termo-fechar').focus(); }
+    function fechar(){ t.classList.remove('on'); t.setAttribute('aria-hidden','true'); document.body.style.overflow=''; if (ultimo) ultimo.focus(); }
+    document.querySelectorAll('[data-termos-uso]').forEach(function(b){ b.addEventListener('click', abrir); });
+    t.querySelectorAll('[data-fechar-modal]').forEach(function(b){ b.addEventListener('click', fechar); });
+    t.addEventListener('click', function(e){ if (e.target === t) fechar(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && t.classList.contains('on')) fechar(); });
+  })();
 })();
 </script>
 </body>
