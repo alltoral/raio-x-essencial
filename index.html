@@ -734,7 +734,7 @@ Interrompa imediatamente qualquer teste e procure atendimento presencial se apre
 <script>
 (function(){
   /* Troque pelo link real de checkout do Essencial (Hotmart) */
-  var CHECKOUT = { essencial:'' };
+  var CHECKOUT = { essencial:'https://pay.herospark.com/raio-x-essencial-549177' };
   document.querySelectorAll('[data-checkout]').forEach(function(a){ var u = CHECKOUT[a.getAttribute('data-checkout')]; if (u){ a.href = u; a.target = '_blank'; a.rel = 'noopener'; } });
 
   /* Termos e Condições em pop-up */
